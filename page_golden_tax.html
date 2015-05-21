@@ -1,0 +1,372 @@
+
+<!doctype html>
+<html lang="en">
+<head> 
+	<meta charset="utf-8">
+	<title>金税</title> 
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+        <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" type="text/css" media="all" href="css/metro.css" />
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <!-- font Awesome -->
+        <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <link href="css/daterangepicker-bs3.css" rel="stylesheet" type="text/css" />
+      
+        <!-- Theme style -->
+        <link href="css/style.css" rel="stylesheet" type="text/css" />
+	<!--[if lt IE 9]>
+		<script src="js/respond.min.js"></script>
+	<![endif]-->
+</head> 
+<body> 
+
+
+	<div class="metro-layout horizontal">
+		<div class="header">
+			<h1>金税</h1> 
+		</div>
+		<div class="content clearfix">
+			<div class="items">
+				<a class="box" href="#"  data-toggle="modal" data-target="#myModal">
+					<i class="icon fa  fa-flag fa-4x" ></i>	
+					<p>导出到金税</p> 
+				</a>
+
+	<!-- Modal -->
+					<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+					  <div class="modal-dialog">
+					    <div class="modal-content">
+					      <div class="modal-header">
+					        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					        <h4 class="modal-title" id="myModalLabel">选择公司</h4>
+					      </div>
+					      <div class="modal-body"> 
+												  <div class="form-group">
+												    <label for="exampleInputName2">客户</label>
+												    <label for="exampleInputName2">&nbsp;&nbsp;&nbsp;&nbsp;从&nbsp;</label>
+												    <select  class="form-control" >
+											               <option >C20000</option> 
+												           <option >C25000</option>   
+												           <option >C30000</option>  
+											               <option >C32420</option> 
+												           <option >C42300</option>   
+												           <option >C50000</option>  
+												    </select>
+												    <label for="exampleInputName2">&nbsp;到&nbsp;</label>
+												    <select  class="form-control" >
+											               <option >C20000</option> 
+												           <option >C25000</option>   
+												           <option >C30000</option>  
+											               <option >C32420</option> 
+												           <option >C42300</option>   
+												           <option >C50000</option>  
+												    </select>
+												  </div> 
+
+	
+		                                   <label >过账日期</label>
+		                                   <div class="input-group ">
+		                                       <div class="input-group-addon">
+		                                           <i class="fa fa-calendar"></i>
+		                                       </div>
+		                                       <input type="text" class="form-control pull-right" id="reservation3"/>
+		                                   </div><!-- /.input group -->
+		                           
+		                                   <label  >到期日期</label>
+		                                   <div class="input-group  ">
+		                                       <div class="input-group-addon">
+		                                           <i class="fa fa-calendar"></i>
+		                                       </div>
+		                                       <input type="text" class="form-control pull-right" id="reservation4"/>
+		                                   </div><!-- /.input group -->  
+ 
+		                                   <label  >单据日期</label>
+		                                   <div class="input-group  ">
+		                                       <div class="input-group-addon">
+		                                           <i class="fa fa-calendar"></i>
+		                                       </div>
+		                                       <input type="text" class="form-control pull-right" id="reservation2"/>
+		                                   </div><!-- /.input group -->  
+ 
+												  <div class="form-group">
+												    <label for="exampleInputName2">单据编号</label>
+												    <label for="exampleInputName2">&nbsp;&nbsp;&nbsp;&nbsp;从&nbsp;</label>
+												    <select  class="form-control" >
+											               <option >C20000</option> 
+												           <option >C25000</option>   
+												           <option >C30000</option>  
+											               <option >C32420</option> 
+												           <option >C42300</option>   
+												           <option >C50000</option>  
+												    </select>
+												    <label for="exampleInputName2">&nbsp;到&nbsp;</label>
+												    <select  class="form-control" >
+											               <option >C20000</option> 
+												           <option >C25000</option>   
+												           <option >C30000</option>  
+											               <option >C32420</option> 
+												           <option >C42300</option>   
+												           <option >C50000</option>  
+												    </select>
+												  </div> 
+												  <label>
+											    <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" >隐藏与应收款项凭证完全一致的营收款发票
+											  </label>
+					      </div>
+					      <div class="modal-footer">
+					        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+					        <button type="button" class="btn btn-primary">完成</button>
+					      </div>
+					    </div>
+					  </div>
+					</div>
+
+				<a class="box" href="#" style="background: #6b6b6b;" data-toggle="modal" data-target="#myModal1">
+					<i class="icon fa   fa-dollar fa-4x" ></i>	
+					<p>重置金税状态</p> 
+				</a>
+
+	<!-- Modal -->
+					<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+					  <div class="modal-dialog">
+					    <div class="modal-content">
+					      <div class="modal-header">
+					        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					        <h4 class="modal-title" id="myModalLabel">汇率和指数</h4>
+					      </div>
+					      <div class="modal-body">  
+												  <div class="form-group">
+												    <label for="exampleInputName2">客户</label>
+												    <label for="exampleInputName2">&nbsp;&nbsp;&nbsp;&nbsp;从&nbsp;</label>
+												    <select  class="form-control" >
+											               <option >C20000</option> 
+												           <option >C25000</option>   
+												           <option >C30000</option>  
+											               <option >C32420</option> 
+												           <option >C42300</option>   
+												           <option >C50000</option>  
+												    </select>
+												    <label for="exampleInputName2">&nbsp;到&nbsp;</label>
+												    <select  class="form-control" >
+											               <option >C20000</option> 
+												           <option >C25000</option>   
+												           <option >C30000</option>  
+											               <option >C32420</option> 
+												           <option >C42300</option>   
+												           <option >C50000</option>  
+												    </select>
+												  </div> 
+
+	
+		                                   <label >过账日期</label>
+		                                   <div class="input-group ">
+		                                       <div class="input-group-addon">
+		                                           <i class="fa fa-calendar"></i>
+		                                       </div>
+		                                       <input type="text" class="form-control pull-right" id="reservation5"/>
+		                                   </div><!-- /.input group -->
+		                           
+		                                   <label  >到期日期</label>
+		                                   <div class="input-group  ">
+		                                       <div class="input-group-addon">
+		                                           <i class="fa fa-calendar"></i>
+		                                       </div>
+		                                       <input type="text" class="form-control pull-right" id="reservation6"/>
+		                                   </div><!-- /.input group -->  
+ 
+		                                   <label  >单据日期</label>
+		                                   <div class="input-group  ">
+		                                       <div class="input-group-addon">
+		                                           <i class="fa fa-calendar"></i>
+		                                       </div>
+		                                       <input type="text" class="form-control pull-right" id="reservation7"/>
+		                                   </div><!-- /.input group -->  
+ 
+												  <div class="form-group">
+												    <label for="exampleInputName2">单据编号</label>
+												    <label for="exampleInputName2">&nbsp;&nbsp;&nbsp;&nbsp;从&nbsp;</label>
+												    <select  class="form-control" >
+											               <option >C20000</option> 
+												           <option >C25000</option>   
+												           <option >C30000</option>  
+											               <option >C32420</option> 
+												           <option >C42300</option>   
+												           <option >C50000</option>  
+												    </select>
+												    <label for="exampleInputName2">&nbsp;到&nbsp;</label>
+												    <select  class="form-control" >
+											               <option >C20000</option> 
+												           <option >C25000</option>   
+												           <option >C30000</option>  
+											               <option >C32420</option> 
+												           <option >C42300</option>   
+												           <option >C50000</option>  
+												    </select>
+												  </div> 
+												  <label>
+												    <div class="checkbox" style="margin-left:20px">
+													  <label>
+													    <input type="checkbox" value="">已导出
+													  </label>
+													 </div>
+													 <div class="checkbox" style="margin-left:20px">
+													  <label>
+													    <input type="checkbox" value="">已作废
+													  </label>
+													</div>
+					      </div>
+					      <div class="modal-footer">
+					        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+					        <button type="button" class="btn btn-primary">完成</button>
+					      </div>
+					    </div>
+					  </div>
+					</div>
+
+			 
+				<a class="box" href="#" style="background: #f58d00;" data-toggle="modal" data-target="#myModal2">
+					<i class="icon fa fa-cog fa-4x" ></i>	
+					<p>凭证作废</p> 
+				</a>
+
+	<!-- Modal -->
+					<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+					  <div class="modal-dialog">
+					    <div class="modal-content">
+					      <div class="modal-header">
+					        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					        <h4 class="modal-title" id="myModalLabel">汇率和指数</h4>
+					      </div>
+					      <div class="modal-body">  
+												  <div class="form-group">
+												    <label for="exampleInputName2">客户</label>
+												    <label for="exampleInputName2">&nbsp;&nbsp;&nbsp;&nbsp;从&nbsp;</label>
+												    <select  class="form-control" >
+											               <option >C20000</option> 
+												           <option >C25000</option>   
+												           <option >C30000</option>  
+											               <option >C32420</option> 
+												           <option >C42300</option>   
+												           <option >C50000</option>  
+												    </select>
+												    <label for="exampleInputName2">&nbsp;到&nbsp;</label>
+												    <select  class="form-control" >
+											               <option >C20000</option> 
+												           <option >C25000</option>   
+												           <option >C30000</option>  
+											               <option >C32420</option> 
+												           <option >C42300</option>   
+												           <option >C50000</option>  
+												    </select>
+												  </div> 
+
+	
+		                                   <label >过账日期</label>
+		                                   <div class="input-group ">
+		                                       <div class="input-group-addon">
+		                                           <i class="fa fa-calendar"></i>
+		                                       </div>
+		                                       <input type="text" class="form-control pull-right" id="reservation8"/>
+		                                   </div><!-- /.input group -->
+		                           
+		                                   <label  >到期日期</label>
+		                                   <div class="input-group  ">
+		                                       <div class="input-group-addon">
+		                                           <i class="fa fa-calendar"></i>
+		                                       </div>
+		                                       <input type="text" class="form-control pull-right" id="reservation9"/>
+		                                   </div><!-- /.input group -->  
+ 
+		                                   <label  >单据日期</label>
+		                                   <div class="input-group  ">
+		                                       <div class="input-group-addon">
+		                                           <i class="fa fa-calendar"></i>
+		                                       </div>
+		                                       <input type="text" class="form-control pull-right" id="reservation0"/>
+		                                   </div><!-- /.input group -->  
+ 
+												  <div class="form-group">
+												    <label for="exampleInputName2">单据编号</label>
+												    <label for="exampleInputName2">&nbsp;&nbsp;&nbsp;&nbsp;从&nbsp;</label>
+												    <select  class="form-control" >
+											               <option >C20000</option> 
+												           <option >C25000</option>   
+												           <option >C30000</option>  
+											               <option >C32420</option> 
+												           <option >C42300</option>   
+												           <option >C50000</option>  
+												    </select>
+												    <label for="exampleInputName2">&nbsp;到&nbsp;</label>
+												    <select  class="form-control" >
+											               <option >C20000</option> 
+												           <option >C25000</option>   
+												           <option >C30000</option>  
+											               <option >C32420</option> 
+												           <option >C42300</option>   
+												           <option >C50000</option>  
+												    </select>
+												  </div> 
+												  <label> 
+					      </div>
+					      <div class="modal-footer">
+					        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+					        <button type="button" class="btn btn-primary">完成</button>
+					      </div>
+					    </div>
+					  </div>
+					</div>
+
+
+				<a class="box" href="#" style="background: #43b51f;" data-toggle="modal" data-target="#myModal3">
+					<i class="icon fa  fa-building-o fa-4x" ></i>	
+					<p>从金税导入</p> 
+				</a> 
+					<div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+					  <div class="modal-dialog">
+					    <div class="modal-content">
+					      <div class="modal-header">
+					        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					        <h4 class="modal-title" id="myModalLabel">汇率和指数</h4>
+					      </div>
+					      <div class="modal-body">   
+							  <div class="form-group">
+							    <label for="exampleInputFile">选择导入文件</label>
+							    <input type="file" id="exampleInputFile"> 
+							  </div>
+					      </div>
+					      <div class="modal-footer">
+					        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+					        <button type="button" class="btn btn-primary">完成</button>
+					      </div>
+					    </div>
+					  </div>
+					</div>
+ 
+			</div>
+		</div>
+
+	</div>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="js/jquery.plugins.min.js"></script>
+        <script src="js/bootstrap.min.js" type="text/javascript"></script>
+ 	<script src="js/daterangepicker.js" type="text/javascript"></script>	
+ 	<script type="text/javascript">      $(function() {        
+                //Date range picker 
+                $('#reservation2').daterangepicker(); 
+                $('#reservation3').daterangepicker(); 
+                $('#reservation4').daterangepicker();  
+                $('#reservation5').daterangepicker(); 
+                $('#reservation6').daterangepicker(); 
+                $('#reservation7').daterangepicker();  
+                $('#reservation8').daterangepicker(); 
+                $('#reservation9').daterangepicker(); 
+                $('#reservation0').daterangepicker();  
+                //Date range picker with time picker
+         
+ 
+            }); </script> 
+	<script src="js/metro.js"></script>
+</body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>SAP Business One</title>
+        <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+        <!-- bootstrap 3.0.2 -->
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <!-- font Awesome -->
+        <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+      
+        <!-- Theme style -->
+        <link href="css/style.css" rel="stylesheet" type="text/css" />
+
+      
+    </head>
+    <body class="skin-black">
+        <!-- header logo: style can be found in header.less -->
+        <header class="header">
+            <a href="index.html" class="logo">
+                <!-- Add the class icon to your logo image or logo icon to add the margining -->
+                SAP Business One
+            </a>
+            <!-- Header Navbar: style can be found in header.less -->
+            <nav class="navbar navbar-static-top" role="navigation">
+                <!-- Sidebar toggle button-->
+                <a href="#" class="navbar-btn sidebar-toggle" data-toggle="offcanvas" role="button">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <div class="navbar-right">
+                    <ul class="nav navbar-nav">
+                        <!-- Messages: style can be found in dropdown.less-->
+                         
+                        <!-- User Account: style can be found in dropdown.less -->
+                        <li class="dropdown user user-menu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="glyphicon glyphicon-user"></i>
+                                <span>李想 <i class="caret"></i></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <!-- User image -->
+                                <li class="user-header bg-light-black">
+                                    <img src="img/avatar5.png" class="img-circle" alt="User Image" />
+                                    <p>
+                                       李想
+                                        <small>大BOSS</small>
+                                    </p>
+                                </li>
+                             
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <div class="wrapper row-offcanvas row-offcanvas-left">
+            <!-- Left side column. contains the logo and sidebar -->
+            <aside class="left-side sidebar-offcanvas">
+                <!-- sidebar: style can be found in sidebar.less -->
+                <section class="sidebar">
+                    <!-- Sidebar user panel -->
+                    <div class="user-panel">
+                        <div class="pull-left image">
+                            <img src="img/avatar5.png" class="img-circle" alt="User Image" />
+                        </div>
+                        <div class="pull-left info">
+                            <p>Hello, 想神</p>
+
+                            <a href="#"><i class="fa fa-circle text-success"></i> 在线</a>
+                        </div>
+                    </div>
+                    <!-- search form -->
+                    <form action="#" method="get" class="sidebar-form">
+                        <div class="input-group">
+                            <input type="text" name="q" class="form-control" placeholder="Search..."/>
+                            <span class="input-group-btn">
+                                <button type='submit' name='seach' id='search-btn' class="btn btn-flat"><i class="fa fa-search"></i></button>
+                            </span>
+                        </div>
+                    </form>
+                    <!-- /.search form -->
+                    <!-- sidebar menu: : style can be found in sidebar.less -->
+                    <ul class="sidebar-menu">
+ 
+                        <li class="treeview">
+                            <a href="#">
+                                <i class="fa fa-bar-chart-o"></i>
+                                <span>我的主控室</span>
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li><a href="" target="iframe"><i class="fa fa-angle-double-right"></i> 主页</a></li>
+                                <li><a href="" target="iframe"><i class="fa fa-angle-double-right"></i> 销售</a></li>
+                                <li><a href="" target="iframe"><i class="fa fa-angle-double-right"></i> 服务</a></li>
+                                <li><a href="" target="iframe"><i class="fa fa-angle-double-right"></i> 财务</a></li>
+                                <li><a href="" target="iframe"><i class="fa fa-angle-double-right"></i> 采购</a></li>
+                            </ul>
+                        </li>
+                        <li class="treeview">
+                            <a href="#">
+                                <i class="fa fa-laptop"></i>
+                                <span>模块</span>
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li><a href="page_manager.html" target="iframe" class="active"><i class="fa fa-angle-double-right"></i> 管理</a></li>
+                                <li><a href="" target="iframe"><i class="fa fa-angle-double-right"></i> 财务</a></li>
+                                <li><a href="" target="iframe"><i class="fa fa-angle-double-right"></i> 销售机会</a></li>
+                                <li><a href="page_sales_accounts_receivable.html" target="iframe"><i class="fa fa-angle-double-right"></i> 销售-应收账单</a></li>
+                                <li><a href="" target="iframe"><i class="fa fa-angle-double-right"></i> 采购-应付账款</a></li>
+                                <li><a href="" target="iframe"><i class="fa fa-angle-double-right"></i> 业务伙伴</a></li>
+                                <li><a href="" target="iframe"><i class="fa fa-angle-double-right"></i> 收付款业务</a></li>
+                                <li><a href="" target="iframe"><i class="fa fa-angle-double-right"></i> 库存</a></li>
+                                <li><a href="" target="iframe"><i class="fa fa-angle-double-right"></i> 生产</a></li>
+                                <li><a href="" target="iframe"><i class="fa fa-angle-double-right"></i> 物料需求计划</a></li>
+                                <li><a href="" target="iframe"><i class="fa fa-angle-double-right"></i> 服务</a></li>
+                                <li><a href="" target="iframe"><i class="fa fa-angle-double-right"></i> 人力资源</a></li>
+                                <li><a href="" target="iframe"><i class="fa fa-angle-double-right"></i> 报表</a></li> 
+                            </ul>
+                        </li>
+                        <li class="treeview">
+                            <a href="#">
+                                <i class="fa fa-edit"></i> <span>拖动相关</span>
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li><a href="" target="iframe"><i class="fa fa-angle-double-right"></i> 业务伙伴</a></li>
+                                <li><a href="" target="iframe"><i class="fa fa-angle-double-right"></i> 业务伙伴组</a></li>
+                                <li><a href="" target="iframe"><i class="fa fa-angle-double-right"></i> 作业</a></li>
+                                <li><a href="" target="iframe"><i class="fa fa-angle-double-right"></i> 联系人</a></li>
+                                <li><a href="" target="iframe"><i class="fa fa-angle-double-right"></i> 付款条件</a></li>
+                                <li><a href="" target="iframe"><i class="fa fa-angle-double-right"></i> 一揽子协议</a></li>
+                                <li><a href="" target="iframe"><i class="fa fa-angle-double-right"></i> 一揽子协议详细信息</a></li>
+                                <li><a href="" target="iframe"><i class="fa fa-angle-double-right"></i> 营销活动</a></li>
+                                <li><a href="" target="iframe"><i class="fa fa-angle-double-right"></i> 营销活动详细信息</a></li>
+                            </ul>
+                        </li> 
+                        </li>
+                        <li class="treeview">
+                            <a href="#">
+                                <i class="fa fa-bar-chart-o"></i>
+                                <span>小工具库</span>
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li><a href="" target="iframe"><i class="fa fa-angle-double-right"></i> 通用功能</a></li>
+                                <li><a href="" target="iframe"><i class="fa fa-angle-double-right"></i> 未清单据</a></li>
+                                <li><a href="" target="iframe"><i class="fa fa-angle-double-right"></i> 消息和警报</a></li> 
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="calendar.html" target="iframe">
+                                <i class="fa fa-calendar"></i> <span>日历</span> 
+                            </a>
+                        </li>
+                     
+                </section>
+                <!-- /.sidebar -->
+            </aside>
+
+            <!-- Right side column. Contains the navbar and content of the page -->
+          <aside class="right-side">                
+                <!-- Content Header (Page header) -->
+
+        <iframe name="iframe" src="" id="main">
+            
+        </iframe>
+ 
+       
+            </aside><!-- /.right-side -->
+        </div><!-- ./wrapper -->
+ 
+<script type="text/javascript">
+    $('#myModal').on('shown.bs.modal', function () {
+  $('#myInput').focus()
+})
+
+</script>
+        <!-- jQuery 2.0.2 -->
+        <script src="js/jquery_ajax.min.js"></script>
+        <!-- jQuery UI 1.10.3 --> 
+        <!-- Bootstrap --> 
+        <script src="js/bootstrap.min.js" type="text/javascript"></script>
+         
+ 
+        <!-- AdminLTE App -->
+        <script src="js/global.js" type="text/javascript"></script>
+         <script type="text/javascript" language="javascript">
+
+ $(window.parent.document).find("#main").load(function(){
+var main = $(window.parent.document).find("#main");
+var thisheight = $(document).height()+30;
+main.height(thisheight);
+});
+
+</script> 
+
+    </body>
+</html>

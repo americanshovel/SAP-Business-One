@@ -1,0 +1,1008 @@
+
+<!doctype html>
+<html lang="en">
+<head> 
+	<meta charset="utf-8">
+	<title>销售报表</title> 
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+        <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" type="text/css" media="all" href="css/metro.css" />
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <!-- font Awesome -->
+        <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <link href="css/daterangepicker-bs3.css" rel="stylesheet" type="text/css" />
+      
+        <!-- Theme style -->
+        <link href="css/style.css" rel="stylesheet" type="text/css" />
+	<!--[if lt IE 9]>
+		<script src="js/respond.min.js"></script>
+	<![endif]-->
+</head> 
+<body> 
+
+
+	<div class="metro-layout horizontal">
+		<div class="header">
+			<h1></h1>
+			<div class="controls">
+				<span class="down" title="Scroll down"></span>
+				<span class="up" title="Scroll up"></span>
+				<span class="next" title="Scroll left"></span>
+				<span class="prev" title="Scroll right"></span>
+				<span class="toggle-view" title="Toggle layout"></span>
+			</div>
+		</div>
+		<div class="content clearfix">
+			<div class="items">
+				<a class="box" href="#"  data-toggle="modal" data-target="#myModal">
+					<i class="icon fa  fa-flag fa-4x" ></i>	
+					<p>未清物料清单</p> 
+				</a>
+
+	<!-- Modal -->
+					<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+					  <div class="modal-dialog">
+					    <div class="modal-content">
+					      <div class="modal-header">
+					        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					        <h4 class="modal-title" id="myModalLabel">未清物料清单</h4>
+					      </div>
+					      <div class="modal-body"> 
+    									 <div class="form-group">
+                                            <label>货币</label>
+                                            <select class="form-control">
+                                                <option>本币</option>
+                                                <option>系统货币</option>
+                                                <option>业务伙伴货币</option> 
+                                            </select>
+                                        </div>
+    									 <div class="form-group">
+                                            <label>未清单据</label>
+                                            <select class="form-control">
+                                                <option>销售报价单</option>
+                                                <option>交货</option>
+                                                <option>退货</option> 
+                                            </select>
+                                        </div>
+							          <table id="mainTable" class="table table-striped">
+							            <thead><tr><th>单据编号</th><th>供应商代码</th><th>供应商名称</th><th>供应商参考号</th></tr></thead>
+							            <tbody>
+							              <tr><td>Car</td><td>100</td><td>200</td><td>0</td></tr>
+							              <tr><td>Bike</td><td>330</td><td>240</td><td>1</td></tr>
+							              <tr><td>Plane</td><td>430</td><td>540</td><td>3</td></tr>
+							              <tr><td>Yacht</td><td>100</td><td>200</td><td>0</td></tr>
+							              <tr><td>Segway</td><td>330</td><td>240</td><td>1</td></tr>
+							            </tbody>
+										<tfoot><tr><th><strong>TOTAL</strong></th><th></th><th></th><th></th></tr></thead>
+							          </table>
+	
+ 
+					      </div>
+					      <div class="modal-footer">
+					        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+					        <button type="button" class="btn btn-primary">完成</button>
+					      </div>
+					    </div>
+					  </div>
+					</div>
+
+				<a class="box" href="#" style="background: #6b6b6b;" data-toggle="modal" data-target="#myModal1">
+					<i class="icon fa   fa-dollar fa-4x" ></i>	
+					<p>单据草稿报表</p> 
+				</a>
+
+	<!-- Modal -->
+					<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+					  <div class="modal-dialog">
+					    <div class="modal-content">
+					      <div class="modal-header">
+					        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					        <h4 class="modal-title" id="myModalLabel">单据草稿报表</h4>
+					      </div>
+					      <div class="modal-body">  
+								
+    									 <div class="form-group">
+                                            <label>用户</label>
+                                            <select class="form-control">
+                                                <option>manager</option>
+                                                <option>A0001</option>
+                                                <option>A0002</option> 
+                                            </select>
+                                        </div>
+											  <label>
+											    <input type="checkbox" value="">仅显示未清项
+											  </label> 
+											  <label>单据类型</label> 
+											  <label>
+											      <input type="checkbox" value="">销售报价单
+											  </label> 
+											  <label>
+											      <input type="checkbox" value="">销售订单
+											  </label> 
+											  <label>
+						    					  <input type="checkbox" value="">交货
+											  </label> 
+											  <label>
+											      <input type="checkbox" value="">退货
+											  </label> 
+											  <label>
+											      <input type="checkbox" value="">预收款
+											  </label> 
+											  <label>
+						    					  <input type="checkbox" value="">应收发票
+											  </label> 
+											  <label>
+											      <input type="checkbox" value="">应收货项凭证
+											  </label> 
+											  <label>
+											      <input type="checkbox" value="">采购申请
+											  </label> 
+											  <label>
+						    					  <input type="checkbox" value="">采购报价单
+											  </label> 
+											  <label>
+											      <input type="checkbox" value="">采购订单
+											  </label> 
+											  <label>
+											      <input type="checkbox" value="">采购收货单
+											  </label> 
+											  <label>
+						    					  <input type="checkbox" value="">采购退货
+											  </label> 
+											  <label>
+											      <input type="checkbox" value="">预付款
+											  </label> 
+											  <label>
+											      <input type="checkbox" value="">应付发票
+											  </label> 
+											  <label>
+						    					  <input type="checkbox" value="">应付货项凭 
+											  </label> 
+											  <label>
+											      <input type="checkbox" value="">收款
+											  </label> 
+											  <label>
+											      <input type="checkbox" value="">存款
+											  </label> 
+											  <label>
+						    					  <input type="checkbox" value="">付款
+											  </label> 
+											  <label>
+											      <input type="checkbox" value="">付款支票
+											  </label> 
+											  <label>
+											      <input type="checkbox" value="">日记账分录
+											  </label> 
+											  <label>
+						    					  <input type="checkbox" value="">发货
+											  </label> 
+											  <label>
+											      <input type="checkbox" value="">收货
+											  </label> 
+											  <label>
+											      <input type="checkbox" value="">库存转储申请
+											  </label> 
+											  <label>
+						    					  <input type="checkbox" value="">库存转储
+											  </label> 
+											  <label>
+						    					  <input type="checkbox" value="">汇票-应收账款
+											  </label> 
+											  <label>
+											      <input type="checkbox" value="">汇票-应付款
+											  </label> 
+											  <label>
+											      <input type="checkbox" value="">汇票交易
+											  </label> 
+											  <label>
+						    					  <input type="checkbox" value="">生产订单
+											  </label> 
+											  <label>
+						    					  <input type="checkbox" value="">拣配清单
+											  </label> 
+											  <label>
+											      <input type="checkbox" value="">库存盘点
+											  </label> 
+											  <label>
+											      <input type="checkbox" value="">库存过账
+											  </label> 
+											  <label>
+						    					  <input type="checkbox" value="">库存期初余额    
+											  </label> 
+								 <div class="form-group ">
+                                        <label for="lastname" class="col-sm-2 control-label">日期</label>
+                                        <div class="input-group col-sm-10">
+                                            <div class="input-group-addon">
+                                                <i class="fa fa-calendar"></i>
+                                            </div>
+                                            <input type="text" class="form-control pull-right" id="reservation5"/>
+                                        </div><!-- /.input group -->
+                                    </div><!-- /.form group -->
+
+ 
+					      </div>
+					      <div class="modal-footer">
+					        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+					        <button type="button" class="btn btn-primary">完成</button>
+					      </div>
+					    </div>
+					  </div>
+					</div>
+
+			 
+				<a class="box" href="#" style="background: #f58d00;" data-toggle="modal" data-target="#myModal2">
+					<i class="icon fa fa-cog fa-4x" ></i>	
+					<p>采购分析（供应商）</p> 
+				</a>
+					<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+					  <div class="modal-dialog">
+					    <div class="modal-content">
+					      <div class="modal-header">
+					        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					        <h4 class="modal-title" id="myModalLabel">采购分析（供应商）</h4>
+					      </div>
+					      <div class="modal-body">  
+								<label > 
+									报表
+								</label>
+								<label class="radio-inline">
+								  <input type="radio" name="data"> 年度报表
+								</label>
+								<label class="radio-inline">
+								  <input type="radio" name="data"> 月报表
+								</label>
+								<label class="radio-inline">
+								  <input type="radio" name="data"> 季度报表
+								</label>
+								<label > 
+									订单
+								</label>
+								<label class="radio-inline">
+								  <input type="radio" name="type"> 应付发票
+								</label>
+								<label class="radio-inline">
+								  <input type="radio" name="type"> 采购订单
+								</label>
+								<label class="radio-inline">
+								  <input type="radio" name="type"> 采购收货单
+								</label> 
+								<label > 
+									显示
+								</label>
+								<label class="radio-inline">
+								  <input type="radio" name="type1"> 单独显示
+								</label>
+								<label class="radio-inline">
+								  <input type="radio" name="type1"> 组显示
+								</label>
+									 <div class="form-group ">
+                                        <label for="lastname" class="col-sm-2 control-label">过账日期</label>
+                                        <div class="input-group col-sm-10">
+                                            <div class="input-group-addon">
+                                                <i class="fa fa-calendar"></i>
+                                            </div>
+                                            <input type="text" class="form-control pull-right" id="reservation"/>
+                                        </div><!-- /.input group -->
+                                    </div><!-- /.form group -->
+
+									 <div class="form-group ">
+                                        <label for="lastname" class="col-sm-2 control-label">到账日期</label>
+                                        <div class="input-group col-sm-10">
+                                            <div class="input-group-addon">
+                                                <i class="fa fa-calendar"></i>
+                                            </div>
+                                            <input type="text" class="form-control pull-right" id="reservation1"/>
+                                        </div><!-- /.input group -->
+                                    </div><!-- /.form group -->
+
+									 <div class="form-group ">
+                                        <label for="lastname" class="col-sm-2 control-label">单据日期</label>
+                                        <div class="input-group col-sm-10">
+                                            <div class="input-group-addon">
+                                                <i class="fa fa-calendar"></i>
+                                            </div>
+                                            <input type="text" class="form-control pull-right" id="reservation2"/>
+                                        </div><!-- /.input group -->
+                                    </div><!-- /.form group -->
+								<label > 
+									供应商
+								</label>
+												    <label for="exampleInputName2">&nbsp;&nbsp;&nbsp;&nbsp;从&nbsp;</label>
+												    <select  class="form-control" >
+											               <option >C20000</option> 
+												           <option >C25000</option>   
+												           <option >C30000</option>  
+											               <option >C32420</option> 
+												           <option >C42300</option>   
+												           <option >C50000</option>  
+												    </select>
+												    <label for="exampleInputName2">&nbsp;到&nbsp;</label>
+												    <select  class="form-control" >
+											               <option >C20000</option> 
+												           <option >C25000</option>   
+												           <option >C30000</option>  
+											               <option >C32420</option> 
+												           <option >C42300</option>   
+												           <option >C50000</option>  
+												    </select>
+					  
+ 
+					      </div>
+					      <div class="modal-footer">
+					        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+					        <button type="button" class="btn btn-primary">完成</button>
+					      </div>
+					    </div>
+					  </div>
+					</div>
+
+
+				<a class="box" href="#" style="background: #43b51f;" data-toggle="modal" data-target="#myModal3">
+					<i class="icon fa  fa-building-o fa-4x" ></i>	
+					<p>采购分析（物流）</p> 
+				</a> 
+					<div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+					  <div class="modal-dialog">
+					    <div class="modal-content">
+					      <div class="modal-header">
+					        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					        <h4 class="modal-title" id="myModalLabel">采购分析（物流）</h4>
+					      </div>
+					      <div class="modal-body">  <label > 
+									报表
+								</label>
+								<label class="radio-inline">
+								  <input type="radio" name="data"> 年度报表
+								</label>
+								<label class="radio-inline">
+								  <input type="radio" name="data"> 月报表
+								</label>
+								<label class="radio-inline">
+								  <input type="radio" name="data"> 季度报表
+								</label>
+								<label > 
+									订单
+								</label>
+								<label class="radio-inline">
+								  <input type="radio" name="type"> 应付发票
+								</label>
+								<label class="radio-inline">
+								  <input type="radio" name="type"> 采购订单
+								</label>
+								<label class="radio-inline">
+								  <input type="radio" name="type"> 采购收货单
+								</label> 
+								<label > 
+									显示
+								</label>
+								<label class="radio-inline">
+								  <input type="radio" name="type1"> 单独显示
+								</label>
+								<label class="radio-inline">
+								  <input type="radio" name="type1"> 组显示
+								</label>
+									 <div class="form-group ">
+                                        <label for="lastname" class="col-sm-2 control-label">过账日期</label>
+                                        <div class="input-group col-sm-10">
+                                            <div class="input-group-addon">
+                                                <i class="fa fa-calendar"></i>
+                                            </div>
+                                            <input type="text" class="form-control pull-right" id="reservation3"/>
+                                        </div><!-- /.input group -->
+                                    </div><!-- /.form group -->
+
+									 <div class="form-group ">
+                                        <label for="lastname" class="col-sm-2 control-label">到账日期</label>
+                                        <div class="input-group col-sm-10">
+                                            <div class="input-group-addon">
+                                                <i class="fa fa-calendar"></i>
+                                            </div>
+                                            <input type="text" class="form-control pull-right" id="reservation4"/>
+                                        </div><!-- /.input group -->
+                                    </div><!-- /.form group -->
+
+									 <div class="form-group ">
+                                        <label for="lastname" class="col-sm-2 control-label">单据日期</label>
+                                        <div class="input-group col-sm-10">
+                                            <div class="input-group-addon">
+                                                <i class="fa fa-calendar"></i>
+                                            </div>
+                                            <input type="text" class="form-control pull-right" id="reservation6"/>
+                                        </div><!-- /.input group -->
+                                    </div><!-- /.form group -->
+								<label > 
+									供应商
+								</label>
+												    <label for="exampleInputName2">&nbsp;&nbsp;&nbsp;&nbsp;从&nbsp;</label>
+												    <select  class="form-control" >
+											               <option >C20000</option> 
+												           <option >C25000</option>   
+												           <option >C30000</option>  
+											               <option >C32420</option> 
+												           <option >C42300</option>   
+												           <option >C50000</option>  
+												    </select>
+												    <label for="exampleInputName2">&nbsp;到&nbsp;</label>
+												    <select  class="form-control" >
+											               <option >C20000</option> 
+												           <option >C25000</option>   
+												           <option >C30000</option>  
+											               <option >C32420</option> 
+												           <option >C42300</option>   
+												           <option >C50000</option>  
+												    </select>
+								
+    									   
+ 
+					      </div>
+					      <div class="modal-footer">
+					        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+					        <button type="button" class="btn btn-primary">完成</button>
+					      </div>
+					    </div>
+					  </div>
+					</div>
+
+				<a class="box" href="#" style="background: #640f6c;" data-toggle="modal" data-target="#myModal4"> 
+					<i class="icon fa fa-road fa-4x" ></i>	
+					<p>采购分析（售货员）</p> 
+				</a> 
+					<div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+					  <div class="modal-dialog">
+					    <div class="modal-content">
+					      <div class="modal-header">
+					        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					        <h4 class="modal-title" id="myModalLabel">采购分析（售货员）</h4>
+					      </div>
+					      <div class="modal-body">  <label > 
+									报表
+								</label>
+								<label class="radio-inline">
+								  <input type="radio" name="data"> 年度报表
+								</label>
+								<label class="radio-inline">
+								  <input type="radio" name="data"> 月报表
+								</label>
+								<label class="radio-inline">
+								  <input type="radio" name="data"> 季度报表
+								</label>
+								<label > 
+									订单
+								</label>
+								<label class="radio-inline">
+								  <input type="radio" name="type"> 应付发票
+								</label>
+								<label class="radio-inline">
+								  <input type="radio" name="type"> 采购订单
+								</label>
+								<label class="radio-inline">
+								  <input type="radio" name="type"> 采购收货单
+								</label> 
+								<label > 
+									显示
+								</label>
+								<label class="radio-inline">
+								  <input type="radio" name="type1"> 单独显示
+								</label>
+								<label class="radio-inline">
+								  <input type="radio" name="type1"> 组显示
+								</label>
+									 <div class="form-group ">
+                                        <label for="lastname" class="col-sm-2 control-label">过账日期</label>
+                                        <div class="input-group col-sm-10">
+                                            <div class="input-group-addon">
+                                                <i class="fa fa-calendar"></i>
+                                            </div>
+                                            <input type="text" class="form-control pull-right" id="reservation7"/>
+                                        </div><!-- /.input group -->
+                                    </div><!-- /.form group -->
+
+									 <div class="form-group ">
+                                        <label for="lastname" class="col-sm-2 control-label">到账日期</label>
+                                        <div class="input-group col-sm-10">
+                                            <div class="input-group-addon">
+                                                <i class="fa fa-calendar"></i>
+                                            </div>
+                                            <input type="text" class="form-control pull-right" id="reservation8"/>
+                                        </div><!-- /.input group -->
+                                    </div><!-- /.form group -->
+
+									 <div class="form-group ">
+                                        <label for="lastname" class="col-sm-2 control-label">单据日期</label>
+                                        <div class="input-group col-sm-10">
+                                            <div class="input-group-addon">
+                                                <i class="fa fa-calendar"></i>
+                                            </div>
+                                            <input type="text" class="form-control pull-right" id="reservation9"/>
+                                        </div><!-- /.input group -->
+                                    </div><!-- /.form group -->
+								<label > 
+									供应商
+								</label>
+												    <label for="exampleInputName2">&nbsp;&nbsp;&nbsp;&nbsp;从&nbsp;</label>
+												    <select  class="form-control" >
+											               <option >C20000</option> 
+												           <option >C25000</option>   
+												           <option >C30000</option>  
+											               <option >C32420</option> 
+												           <option >C42300</option>   
+												           <option >C50000</option>  
+												    </select>
+												    <label for="exampleInputName2">&nbsp;到&nbsp;</label>
+												    <select  class="form-control" >
+											               <option >C20000</option> 
+												           <option >C25000</option>   
+												           <option >C30000</option>  
+											               <option >C32420</option> 
+												           <option >C42300</option>   
+												           <option >C50000</option>  
+												    </select>
+								
+    									   
+ 
+					      </div>
+					      <div class="modal-footer">
+					        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+					        <button type="button" class="btn btn-primary">完成</button>
+					      </div>
+					    </div>
+					  </div>
+					</div>
+
+				<a class="box" href="#" style="background: #3c5b9b;" data-toggle="modal" data-target="#myModal5"> 
+					<i class="icon fa fa-arrows fa-4x" ></i>	
+					<p>采购申请报表</p> 
+				</a>
+					<div class="modal fade" id="myModal5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+					  <div class="modal-dialog">
+					    <div class="modal-content">
+					      <div class="modal-header">
+					        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					        <h4 class="modal-title" id="myModalLabel">采购申请报表</h4>
+					      </div>
+					      <div class="modal-body">  
+    									 <div class="form-group">
+                                            <label>类型</label>
+                                            <select class="form-control">
+                                                <option>物料</option> 
+                                                <option>服务</option> 
+                                            </select>
+                                        </div>
+								<label > 
+									编号
+								</label>
+												    <label for="exampleInputName2">&nbsp;&nbsp;&nbsp;&nbsp;从&nbsp;</label>
+												    <select  class="form-control" >
+											               <option >C20000</option> 
+												           <option >C25000</option>   
+												           <option >C30000</option>  
+											               <option >C32420</option> 
+												           <option >C42300</option>   
+												           <option >C50000</option>  
+												    </select>
+												    <label for="exampleInputName2">&nbsp;到&nbsp;</label>
+												    <select  class="form-control" >
+											               <option >C20000</option> 
+												           <option >C25000</option>   
+												           <option >C30000</option>  
+											               <option >C32420</option> 
+												           <option >C42300</option>   
+												           <option >C50000</option>  
+												    </select>
+
+								<label > 
+									首选供应商
+								</label>
+												    <label for="exampleInputName2">&nbsp;&nbsp;&nbsp;&nbsp;从&nbsp;</label>
+												    <select  class="form-control" >
+											               <option >C20000</option> 
+												           <option >C25000</option>   
+												           <option >C30000</option>  
+											               <option >C32420</option> 
+												           <option >C42300</option>   
+												           <option >C50000</option>  
+												    </select>
+												    <label for="exampleInputName2">&nbsp;到&nbsp;</label>
+												    <select  class="form-control" >
+											               <option >C20000</option> 
+												           <option >C25000</option>   
+												           <option >C30000</option>  
+											               <option >C32420</option> 
+												           <option >C42300</option>   
+												           <option >C50000</option>  
+												    </select>
+    									 <div class="form-group">
+                                            <label>物料组</label>
+                                            <select class="form-control">
+                                                <option>全部</option> 
+                                                <option>HP打印机</option> 
+                                                <option>IBM打印机</option> 
+                                            </select>
+                                        </div>
+                                            <label>申请者</label>
+								<label class="radio-inline">
+								  <input type="radio" name="user"> 员工
+								</label>
+								<label class="radio-inline">
+								  <input type="radio" name="user"> 用户
+								</label>
+								<label class="radio-inline">
+								  <input type="radio" name="user"> 员工和用户
+								</label>
+								<label > 
+    									 <div class="form-group">
+                                            <label>分属</label>
+                                            <select class="form-control">
+                                                <option>1</option> 
+                                                <option>2</option> 
+                                            </select>
+                                        </div>
+    									 <div class="form-group">
+                                            <label>部门</label>
+                                            <select class="form-control">
+                                                <option>1</option> 
+                                                <option>2</option> 
+                                            </select>
+                                        </div>
+    									 <div class="form-group">
+                                            <label>项目</label>
+                                            <select class="form-control">
+                                                <option>1</option> 
+                                                <option>2</option> 
+                                            </select>
+                                        </div>
+								<label > 
+									单据编号
+								</label>
+												    <label for="exampleInputName2">&nbsp;&nbsp;&nbsp;&nbsp;从&nbsp;</label>
+												    <select  class="form-control" >
+											               <option >C20000</option> 
+												           <option >C25000</option>   
+												           <option >C30000</option>  
+											               <option >C32420</option> 
+												           <option >C42300</option>   
+												           <option >C50000</option>  
+												    </select>
+												    <label for="exampleInputName2">&nbsp;到&nbsp;</label>
+												    <select  class="form-control" >
+											               <option >C20000</option> 
+												           <option >C25000</option>   
+												           <option >C30000</option>  
+											               <option >C32420</option> 
+												           <option >C42300</option>   
+												           <option >C50000</option>  
+												    </select>
+									 <div class="form-group ">
+                                        <label for="lastname" class="col-sm-2 control-label">过账日期</label>
+                                        <div class="input-group col-sm-10">
+                                            <div class="input-group-addon">
+                                                <i class="fa fa-calendar"></i>
+                                            </div>
+                                            <input type="text" class="form-control pull-right" id="reservation11"/>
+                                        </div><!-- /.input group -->
+                                    </div><!-- /.form group -->
+
+									 <div class="form-group ">
+                                        <label for="lastname" class="col-sm-2 control-label">有效日期</label>
+                                        <div class="input-group col-sm-10">
+                                            <div class="input-group-addon">
+                                                <i class="fa fa-calendar"></i>
+                                            </div>
+                                            <input type="text" class="form-control pull-right" id="reservation12"/>
+                                        </div><!-- /.input group -->
+                                    </div><!-- /.form group -->
+
+									 <div class="form-group ">
+                                        <label for="lastname" class="col-sm-2 control-label">单据日期</label>
+                                        <div class="input-group col-sm-10">
+                                            <div class="input-group-addon">
+                                                <i class="fa fa-calendar"></i>
+                                            </div>
+                                            <input type="text" class="form-control pull-right" id="reservation13"/>
+                                        </div><!-- /.input group -->
+                                    </div><!-- /.form group -->
+
+									 <div class="form-group ">
+                                        <label for="lastname" class="col-sm-2 control-label">必须日期</label>
+                                        <div class="input-group col-sm-10">
+                                            <div class="input-group-addon">
+                                                <i class="fa fa-calendar"></i>
+                                            </div>
+                                            <input type="text" class="form-control pull-right" id="reservation14"/>
+                                        </div><!-- /.input group -->
+                                    </div><!-- /.form group -->
+											  <label>
+											    <input type="checkbox" value="">仅显示未清项	
+											  </label> 
+											  <label>
+											    <input type="checkbox" value="">仅显示物料需求计划中的采购申请
+											  </label> 
+
+
+								
+    									   
+ 
+					      </div>
+					      <div class="modal-footer">
+					        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+					        <button type="button" class="btn btn-primary">完成</button>
+					      </div>
+					    </div>
+					  </div>
+					</div>
+
+				<a class="box" href="#" style="background: #ffc808;" data-toggle="modal" data-target="#myModal6"> 
+					<i class="icon fa  fa-sort-amount-desc fa-4x" ></i>	
+					<p>审批流程</p> 
+				</a>
+					<div class="modal fade" id="myModal6" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+					  <div class="modal-dialog">
+					    <div class="modal-content">
+					      <div class="modal-header">
+					        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					        <h4 class="modal-title" id="myModalLabel">汇率和指数</h4>
+					      </div>
+					      <div class="modal-body">  
+    									 <div class="form-group">
+                                            <label>类型</label>
+                                            <select class="form-control">
+                                                <option>物料</option> 
+                                                <option>服务</option> 
+                                            </select>
+                                        </div>
+								<label > 
+									编号
+								</label>
+												    <label for="exampleInputName2">&nbsp;&nbsp;&nbsp;&nbsp;从&nbsp;</label>
+												    <select  class="form-control" >
+											               <option >C20000</option> 
+												           <option >C25000</option>   
+												           <option >C30000</option>  
+											               <option >C32420</option> 
+												           <option >C42300</option>   
+												           <option >C50000</option>  
+												    </select>
+												    <label for="exampleInputName2">&nbsp;到&nbsp;</label>
+												    <select  class="form-control" >
+											               <option >C20000</option> 
+												           <option >C25000</option>   
+												           <option >C30000</option>  
+											               <option >C32420</option> 
+												           <option >C42300</option>   
+												           <option >C50000</option>  
+												    </select>
+
+								<label > 
+									首选供应商
+								</label>
+												    <label for="exampleInputName2">&nbsp;&nbsp;&nbsp;&nbsp;从&nbsp;</label>
+												    <select  class="form-control" >
+											               <option >C20000</option> 
+												           <option >C25000</option>   
+												           <option >C30000</option>  
+											               <option >C32420</option> 
+												           <option >C42300</option>   
+												           <option >C50000</option>  
+												    </select>
+												    <label for="exampleInputName2">&nbsp;到&nbsp;</label>
+												    <select  class="form-control" >
+											               <option >C20000</option> 
+												           <option >C25000</option>   
+												           <option >C30000</option>  
+											               <option >C32420</option> 
+												           <option >C42300</option>   
+												           <option >C50000</option>  
+												    </select>
+    									 <div class="form-group">
+                                            <label>物料组</label>
+                                            <select class="form-control">
+                                                <option>全部</option> 
+                                                <option>HP打印机</option> 
+                                                <option>IBM打印机</option> 
+                                            </select>
+                                        </div>
+                                            <label>申请者</label>
+								<label class="radio-inline">
+								  <input type="radio" name="user"> 员工
+								</label>
+								<label class="radio-inline">
+								  <input type="radio" name="user"> 用户
+								</label>
+								<label class="radio-inline">
+								  <input type="radio" name="user"> 员工和用户
+								</label>
+								<label > 
+    									 <div class="form-group">
+                                            <label>分属</label>
+                                            <select class="form-control">
+                                                <option>1</option> 
+                                                <option>2</option> 
+                                            </select>
+                                        </div>
+    									 <div class="form-group">
+                                            <label>部门</label>
+                                            <select class="form-control">
+                                                <option>1</option> 
+                                                <option>2</option> 
+                                            </select>
+                                        </div>
+    									 <div class="form-group">
+                                            <label>项目</label>
+                                            <select class="form-control">
+                                                <option>1</option> 
+                                                <option>2</option> 
+                                            </select>
+                                        </div>
+								<label > 
+									单据编号
+								</label>
+												    <label for="exampleInputName2">&nbsp;&nbsp;&nbsp;&nbsp;从&nbsp;</label>
+												    <select  class="form-control" >
+											               <option >C20000</option> 
+												           <option >C25000</option>   
+												           <option >C30000</option>  
+											               <option >C32420</option> 
+												           <option >C42300</option>   
+												           <option >C50000</option>  
+												    </select>
+												    <label for="exampleInputName2">&nbsp;到&nbsp;</label>
+												    <select  class="form-control" >
+											               <option >C20000</option> 
+												           <option >C25000</option>   
+												           <option >C30000</option>  
+											               <option >C32420</option> 
+												           <option >C42300</option>   
+												           <option >C50000</option>  
+												    </select>
+									 <div class="form-group ">
+                                        <label for="lastname" class="col-sm-2 control-label">过账日期</label>
+                                        <div class="input-group col-sm-10">
+                                            <div class="input-group-addon">
+                                                <i class="fa fa-calendar"></i>
+                                            </div>
+                                            <input type="text" class="form-control pull-right" id="reservation18"/>
+                                        </div><!-- /.input group -->
+                                    </div><!-- /.form group -->
+
+									 <div class="form-group ">
+                                        <label for="lastname" class="col-sm-2 control-label">有效日期</label>
+                                        <div class="input-group col-sm-10">
+                                            <div class="input-group-addon">
+                                                <i class="fa fa-calendar"></i>
+                                            </div>
+                                            <input type="text" class="form-control pull-right" id="reservation17"/>
+                                        </div><!-- /.input group -->
+                                    </div><!-- /.form group -->
+
+									 <div class="form-group ">
+                                        <label for="lastname" class="col-sm-2 control-label">单据日期</label>
+                                        <div class="input-group col-sm-10">
+                                            <div class="input-group-addon">
+                                                <i class="fa fa-calendar"></i>
+                                            </div>
+                                            <input type="text" class="form-control pull-right" id="reservation16"/>
+                                        </div><!-- /.input group -->
+                                    </div><!-- /.form group -->
+
+									 <div class="form-group ">
+                                        <label for="lastname" class="col-sm-2 control-label">必须日期</label>
+                                        <div class="input-group col-sm-10">
+                                            <div class="input-group-addon">
+                                                <i class="fa fa-calendar"></i>
+                                            </div>
+                                            <input type="text" class="form-control pull-right" id="reservation15"/>
+                                        </div><!-- /.input group -->
+                                    </div><!-- /.form group -->
+											  <label>
+											    <input type="checkbox" value="">仅显示未清项	
+											  </label> 
+											  <label>
+											    <input type="checkbox" value="">仅显示物料需求计划中的采购申请
+											  </label> 
+
+
+								
+								
+    									   
+ 
+					      </div>
+					      <div class="modal-footer">
+					        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+					        <button type="button" class="btn btn-primary">完成</button>
+					      </div>
+					    </div>
+					  </div>
+					</div>
+
+		 
+				<a class="box" href="#" style="background: #4c5e51;" data-toggle="modal" data-target="#myModal7">
+					<i class="icon fa fa-legal  fa-4x" ></i>	
+					<p>在发票中定位异常折扣</p>  
+				</a>
+					<div class="modal fade" id="myModal7" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+					  <div class="modal-dialog">
+					    <div class="modal-content">
+					      <div class="modal-header">
+					        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					        <h4 class="modal-title" id="myModalLabel">在发票中定位异常折扣</h4>
+					      </div>
+					      <div class="modal-body">  
+								
+											  <label>单据折扣%	 大于或等于
+											  </label> 
+											<input/>
+    									   
+ 
+					      </div>
+					      <div class="modal-footer">
+					        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+					        <button type="button" class="btn btn-primary">完成</button>
+					      </div>
+					    </div>
+					  </div>
+					</div>
+
+				<a class="box" href="#" style="background: #f874a4;" data-toggle="modal" data-target="#myModal8">
+					<i class="icon fa fa-sitemap  fa-4x" ></i>	
+					<p>参考日期交叉分段中的按照发票的 SP 佣金</p>   
+				</a>
+					<div class="modal fade" id="myModal8" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+					  <div class="modal-dialog">
+					    <div class="modal-content">
+					      <div class="modal-header">
+					        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					        <h4 class="modal-title" id="myModalLabel">参考日期交叉分段中的按照发票的 SP 佣金</h4>
+					      </div>
+					      <div class="modal-body">  
+								<label>销售代表姓名    等于</label>
+											<input/>
+								<label>过账日期    大于或等于</label>
+											<input/>
+								<label>过账日期    小于或等于</label>
+											<input/>
+    									   
+ 
+					      </div>
+					      <div class="modal-footer">
+					        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+					        <button type="button" class="btn btn-primary">完成</button>
+					      </div>
+					    </div>
+					  </div>
+					</div>
+ 
+			</div>
+		</div>
+
+	</div>
+	<script src="js/jquery_ajax.min.js"></script> 
+	<script src="js/jquery.plugins.min.js"></script>
+        <script src="js/bootstrap.min.js" type="text/javascript"></script>
+ 	<script src="js/daterangepicker.js" type="text/javascript"></script>	
+ 	<script type="text/javascript">      $(function() {        
+                //Date range picker 
+                $('#reservation').daterangepicker();  
+                $('#reservation1').daterangepicker();  
+                $('#reservation2').daterangepicker();  
+                $('#reservation3').daterangepicker();  
+                $('#reservation4').daterangepicker();  
+                $('#reservation5').daterangepicker();  
+                $('#reservation6').daterangepicker();  
+                $('#reservation7').daterangepicker();  
+                $('#reservation8').daterangepicker();   
+                $('#reservation9').daterangepicker(); 
+                $('#reservation11').daterangepicker();  
+                $('#reservation12').daterangepicker();  
+                $('#reservation13').daterangepicker();   
+                $('#reservation14').daterangepicker(); 
+                $('#reservation15').daterangepicker();  
+                $('#reservation16').daterangepicker();  
+                $('#reservation17').daterangepicker();   
+                $('#reservation18').daterangepicker(); 
+            });</script>
+	<script src="js/metro.js"></script>
+   	<script src="js/global.js" type="text/javascript"></script>
+</body>
+</html>
